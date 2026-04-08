@@ -63,42 +63,53 @@
 
         <h3 id="result"></h3>
 
-        <script>
-        function checkAnswers() {
-        const answers = {
-            q1: ["l'", "l’"],
-            q2: ["la"],
-            q3: ["les"],
-            q4: ["lui"],
-            q5: ["lui"],
-            q6: ["les"],
-            q7: ["leur"],
-            q8: ["en"],
-            q9: ["y"],
-            q10: ["en"],
-            q11: ["m'y", "m’y", "m y"],
-            q12: ["lui"],
-            q13: ["les"],
-            q14: ["les"],
-            q15: ["y"]
-        };
+<script>
+function checkAnswers() {
 
-        let score = 0;
+  const answers = {
+    q1: ["l'", "l’"],
+    q2: "la",
+    q3: "les",
+    q4: "lui",
+    q5: "lui",
+    q6: "les",
+    q7: "leur",
+    q8: "en",
+    q9: "y",
+    q10: "en",
+    q11: ["m'y", "m’y", "m y"],
+    q12: "lui",
+    q13: "les",
+    q14: "les",
+    q15: "y"
+  };
 
-        for (let key in answers) {
-            let userAnswer = document.getElementById(key).value.toLowerCase().trim();
-            if (userAnswer === answers[key]) {
-            score++;
-            document.getElementById(key).style.borderColor = "green";
-            } else {
-            document.getElementById(key).style.borderColor = "red";
-            }
-        }
+  let score = 0;
 
-        document.getElementById("result").innerHTML =
-            "Score: " + score + " / 15";
-        }
-        </script>
+  for (let key in answers) {
+    let userAnswer = document.getElementById(key).value.toLowerCase().trim();
+
+    if (Array.isArray(answers[key])) {
+      if (answers[key].includes(userAnswer)) {
+        score++;
+        document.getElementById(key).style.borderColor = "green";
+      } else {
+        document.getElementById(key).style.borderColor = "red";
+      }
+    } else {
+      if (userAnswer === answers[key]) {
+        score++;
+        document.getElementById(key).style.borderColor = "green";
+      } else {
+        document.getElementById(key).style.borderColor = "red";
+      }
+    }
+  }
+
+  document.getElementById("result").innerHTML =
+    "Score: " + score + " / 15";
+}
+      </script>
     </main>
 </body>
 </html>
