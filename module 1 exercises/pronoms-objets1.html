@@ -5,34 +5,33 @@
   <title>Exercice - Pronoms Objets</title>
   <style>
     body { font-family: Arial; padding: 20px; }
-    input { width: 120px; margin: 5px; }
+    p { margin-bottom: 18px; line-height: 1.6; }
+    input { width: 120px; margin: 0 5px; }
     .correct { color: #008000; }
     .incorrect { color: #ff0000; }
+    button { margin-top: 0; padding: 10px 20px; font-size: 16px; cursor: pointer; background: #2e7d32; color: #fff; border: none; border-radius: 4px; }
+    .form-actions { display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-top: 20px; }
+    .nav-buttons { display: flex; gap: 10px; }
+    .nav-button { display: inline-flex; align-items: center; justify-content: center; padding: 10px 18px; background: #e8f5e9; color: #2e7d32; border-radius: 4px; text-decoration: none; font-weight: 600; }
+    .nav-button:hover { background: #c8e6c9; }
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Almendra+Display&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Dongle:wght@300;400;700&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
 </head>
 
-
-<body oncontextmenu="return false" oncopy="return false" oncut="return false" onpaste="return false">
+<body onpaste="return false">
+    <header class="site-header">
+        <div class="logo"><a href="index.html"><span class="logo-ibis">ibis</span> <span class="logo-french">FRENCH</span></a></div>
+        <nav class="header-nav">
+          <a class="nav-item" href="#">à propos</a>
+          <a class="nav-item" href="#">F.A.Q</a>
+          <a class="nav-item" href="#">nous contacter</a>
+          <a class="nav-item" href="#">Université de Miami</a>
+        </nav>
+    </header>
   
-<header class="site-header">
-  <div class="logo">
-    <a href="index.html">
-      <span class="logo-ibis">ibis</span> 
-      <span class="logo-french">FRENCH</span>
-    </a>
-  </div>
-  <nav class="header-nav">
-    <a class="nav-item" href="#">à propos</a>
-    <a class="nav-item" href="#">F.A.Q</a>
-    <a class="nav-item" href="#">nous contacter</a>
-    <a class="nav-item" href="#">Université de Miami</a>
-  </nav>
-</header>
-
 <h1>Complétez ce paragraphe avec les pronoms objets directs et indirects.</h1>
 
 <form id="exerciseForm">
@@ -122,7 +121,12 @@
   </label>
   <br><br>
 
-  <button type="button" onclick="checkAnswers()">Vérifier</button>
+        <div class="form-actions">
+          <button type="button" onclick="checkAnswers()">Vérifier</button>
+          <div class="nav-buttons">
+            <a class="nav-button" href="subjonctif-exercice2.html">Suivant</a>
+          </div>
+        </div>
 </form>
 
 <script>
