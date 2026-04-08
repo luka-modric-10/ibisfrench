@@ -28,6 +28,257 @@
         </nav>
     </header>
 
+<body onpaste="return false">
+
+<h1>Exercice : Subjonctif ou Indicatif ?</h1>
+<p>Ces expressions sont suivies d’un verbe. Choisissez si ce verbe doit être au <strong>subjonctif (S)</strong> ou à l’<strong>indicatif (I)</strong>.</p>
+
+<form id="exerciseForm">
+  <label>1. Je suis contente que… 
+    <select data-answer="S">
+      <option value="">--</option>
+      <option value="S">S</option>
+      <option value="I">I</option>
+    </select>
+    <span class="feedback"></span>
+  </label>
+
+  <label>2. Il est probable que… 
+    <select data-answer="I">
+      <option value="">--</option>
+      <option value="S">S</option>
+      <option value="I">I</option>
+    </select>
+    <span class="feedback"></span>
+  </label>
+
+  <label>3. Il est possible que… 
+    <select data-answer="S">
+      <option value="">--</option>
+      <option value="S">S</option>
+      <option value="I">I</option>
+    </select>
+    <span class="feedback"></span>
+  </label>
+
+  <label>4. Je sais que… 
+    <select data-answer="I">
+      <option value="">--</option>
+      <option value="S">S</option>
+      <option value="I">I</option>
+    </select>
+    <span class="feedback"></span>
+  </label>
+
+  <label>5. Je doute que… 
+    <select data-answer="S">
+      <option value="">--</option>
+      <option value="S">S</option>
+      <option value="I">I</option>
+    </select>
+    <span class="feedback"></span>
+  </label>
+
+  <label>6. Je pense que… 
+    <select data-answer="I">
+      <option value="">--</option>
+      <option value="S">S</option>
+      <option value="I">I</option>
+    </select>
+    <span class="feedback"></span>
+  </label>
+
+  <label>7. Penses-tu que… ? 
+    <select data-answer="S">
+      <option value="">--</option>
+      <option value="S">S</option>
+      <option value="I">I</option>
+    </select>
+    <span class="feedback"></span>
+  </label>
+
+  <label>8. Je ne pense pas que… 
+    <select data-answer="S">
+      <option value="">--</option>
+      <option value="S">S</option>
+      <option value="I">I</option>
+    </select>
+    <span class="feedback"></span>
+  </label>
+
+  <label>9. J’espère que… 
+    <select data-answer="I">
+      <option value="">--</option>
+      <option value="S">S</option>
+      <option value="I">I</option>
+    </select>
+    <span class="feedback"></span>
+  </label>
+
+  <label>10. Je souhaite que… 
+    <select data-answer="S">
+      <option value="">--</option>
+      <option value="S">S</option>
+      <option value="I">I</option>
+    </select>
+    <span class="feedback"></span>
+  </label>
+
+  <button type="button" onclick="checkAnswers()">Vérifier</button>
+</form>
+
+<script>
+function checkAnswers() {
+  const selects = document.querySelectorAll('#exerciseForm select');
+  selects.forEach(select => {
+    const answer = select.dataset.answer;
+    const feedback = select.nextElementSibling;
+    if(select.value === "") {
+      feedback.textContent = " ⚠ Choisissez S ou I";
+      feedback.className = "feedback incorrect";
+    } else if(select.value === answer) {
+      feedback.textContent = "✔ Correct";
+      feedback.className = "feedback correct";
+    } else {
+      feedback.textContent = "✖ Incorrect";
+      feedback.className = "feedback incorrect";
+    }
+  });
+}
+
+  let score = 0;
+
+        for (let key in answers) {
+            let userAnswer = document.getElementById(key).value.toLowerCase().trim();
+            if (userAnswer === answers[key]) {
+            score++;
+            document.getElementById(key).style.borderColor = "green";
+            } else {
+            document.getElementById(key).style.borderColor = "red";
+            }
+        }
+
+        document.getElementById("result").innerHTML =
+            "Score: " + score + " / 10";
+  
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subjonctif ou Indicatif</title>
+<style>
+  body { font-family: 'Sansation', Arial, sans-serif; padding: 20px; line-height: 1.6; }
+  label { display: block; margin: 10px 0 5px; }
+  input { width: 180px; margin-right: 10px; }
+  .correct { color: #008000; font-weight: bold; }
+  .incorrect { color: #ff0000; font-weight: bold; }
+  button { margin-top: 20px; padding: 10px 20px; font-size: 16px; cursor: pointer; }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1>Exercice : Subjonctif ou Indicatif</h1>
+<p>Complétez chaque phrase avec la forme correcte du verbe entre parenthèses.</p>
+
+<form id="exerciseForm">
+  <label>1. Je suis sûr qu’il (venir) 
+    <input type="text" data-answer="vient">
+    <span class="feedback"></span>
+  </label>
+
+  <label>2. Il faut que tu (faire) 
+    <input type="text" data-answer="fasses">
+    <span class="feedback"></span>
+  </label>
+
+  <label>3. Je crois qu’elle (comprendre) 
+    <input type="text" data-answer="comprend">
+    <span class="feedback"></span>
+  </label>
+
+  <label>4. Bien qu’il (pleuvoir) 
+    <input type="text" data-answer="pleuve">
+    <span class="feedback"></span>
+  </label>
+
+  <label>5. Il est évident que vous (être) 
+    <input type="text" data-answer="êtes">
+    <span class="feedback"></span>
+  </label>
+
+  <label>6. Il est possible que nous (avoir) 
+    <input type="text" data-answer="ayons">
+    <span class="feedback"></span>
+  </label>
+
+  <label>7. Je sais qu’ils (dire) 
+    <input type="text" data-answer="disent">
+    <span class="feedback"></span>
+  </label>
+
+  <label>8. Il est rare que cet élève (répondre) 
+    <input type="text" data-answer="réponde">
+    <span class="feedback"></span>
+  </label>
+
+  <label>9. Il me semble que tu (oublier) 
+    <input type="text" data-answer="oublies">
+    <span class="feedback"></span>
+  </label>
+
+  <label>10. Il est indispensable que vous (finir) 
+    <input type="text" data-answer="finissiez">
+    <span class="feedback"></span>
+  </label>
+
+  <button type="button" onclick="checkAnswers()">Vérifier</button>
+</form>
+
+<script>
+function checkAnswers() {
+  const inputs = document.querySelectorAll('#exerciseForm input');
+  inputs.forEach(input => {
+    const answer = input.dataset.answer.toLowerCase();
+    const feedback = input.nextElementSibling;
+    const userValue = input.value.trim().toLowerCase();
+    if(userValue === "") {
+      feedback.textContent = " ⚠ Veuillez remplir le champ";
+      feedback.className = "feedback incorrect";
+    } else if(userValue === answer) {
+      feedback.textContent = "✔ Correct";
+      feedback.className = "feedback correct";
+    } else {
+      feedback.textContent = `✖ Incorrect (Réponse: ${answer})`;
+      feedback.className = "feedback incorrect";
+    }
+  });
+}
+
+  let score = 0;
+
+        for (let key in answers) {
+            let userAnswer = document.getElementById(key).value.toLowerCase().trim();
+            if (userAnswer === answers[key]) {
+            score++;
+            document.getElementById(key).style.borderColor = "green";
+            } else {
+            document.getElementById(key).style.borderColor = "red";
+            }
+        }
+
+        document.getElementById("result").innerHTML =
+            "Score: " + score + " / 10";
+  
+</script>
+</body>
+</html>
 
     <main>
         <h2>Complétez avec le verbe au subjonctif.</h2>
