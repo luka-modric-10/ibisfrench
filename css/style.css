@@ -184,6 +184,7 @@ body{
 	color: #000000;
 	white-space: pre-wrap;
 	text-align: center;
+	margin: 0px 130px 0px 0px;
 	/* word-wrap: break-word; */
 	/* check if title wrapping still looks wonky */
 }
