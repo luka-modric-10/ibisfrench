@@ -1,22 +1,104 @@
- <style>
-body { font-family: Arial; padding: 20px; }
-input { width: 120px; margin: 5px; }
+<style>
+body {
+  font-family: 'Dongle', 'Sansation';
+  padding: 20px;
+  background: #fff;
+  color: #111;
+}
 
+/* PAGE WRAPPER */
+.container {
+  max-width: 800px;
+  margin: auto;
+}
 
+/* TITLE */
+h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+/* CONTACT CARD */
+.contact-card {
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+  background: #fff;
+  transition: 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+/* LANGUAGE LABEL */
+.lang {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+/* TEXT */
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* EMAIL STYLE */
+a {
+  color: #2e7d32;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* SMALL INFO BOX STYLE */
+.highlight {
+  background: #f7f7f7;
+  border-left: 4px solid #2e7d32;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
 </style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Almendra+Display&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Dongle:wght@300;400;700&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
 
-<div>
-  <h2>Nous contacter</h2>
+<div class="container">
 
-  <p><strong>FR :</strong> Pour toute question concernant le contenu du cours ou les devoirs, veuillez contacter votre professeur de français. Vous pouvez également contacter la Dre Viviana Pezzullo (directrice des études de premier cycle en français) à 
-    <a href="mailto:vxp478@miami.edu">vxp478@miami.edu</a> pour vos questions sur Ibis French.
-  </p>
+  <h2>📩 Nous contacter</h2>
 
-  <p><strong>EN :</strong> For questions related to course content or assignments, please contact your French instructor. You may also reach out to Dr. Viviana Pezzullo (Director of Undergraduate Studies in French) at 
-    <a href="mailto:vxp478@miami.edu">vxp478@miami.edu</a> for your questions about Ibis French.
-  </p>
+  <div class="contact-card">
+    <div class="lang">FR</div>
+    <p>
+      Pour toute question concernant le contenu du cours ou les devoirs, veuillez contacter votre professeur de français.
+    </p>
+    <p>
+      Vous pouvez également contacter la Dre Viviana Pezzullo (directrice des études de premier cycle en français).
+    </p>
+
+    <div class="highlight">
+      📧 <a href="mailto:vxp478@miami.edu">vxp478@miami.edu</a> pour vos questions sur Ibis French.
+    </div>
+  </div>
+
+  <div class="contact-card">
+    <div class="lang">EN</div>
+    <p>
+      For questions related to course content or assignments, please contact your French instructor.
+    </p>
+    <p>
+      You may also reach out to Dr. Viviana Pezzullo (Director of Undergraduate Studies in French).
+    </p>
+
+    <div class="highlight">
+      📧 <a href="mailto:vxp478@miami.edu">vxp478@miami.edu</a> for your questions about Ibis French.
+    </div>
+  </div>
+
 </div>
