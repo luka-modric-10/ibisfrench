@@ -1,0 +1,59 @@
+<p>
+  Nom de l’étudiant :
+  <input type="text" id="studentName" placeholder="Votre nom">
+</p>
+
+  <button type="button" onclick="downloadCSV()">Télécharger les réponses</button>
+
+  </body>
+  <script>
+function downloadCSV() {
+  const name = document.getElementById("studentName").value.trim();
+
+  if (!name) {
+    alert("Veuillez entrer votre nom.");
+    return;
+  }
+
+  let data = [];
+  
+  // HEADER
+  data.push([
+    "Nom",
+    "Ex1_Q1","Ex1_Q2","Ex1_Q3","Ex1_Q4","Ex1_Q5","Ex1_Q6","Ex1_Q7","Ex1_Q8","Ex1_Q9","Ex1_Q10",
+    "Ex2_Q1","Ex2_Q2","Ex2_Q3","Ex2_Q4","Ex2_Q5","Ex2_Q6","Ex2_Q7","Ex2_Q8","Ex2_Q9","Ex2_Q10",
+    "Ex3_Q1","Ex3_Q2","Ex3_Q3","Ex3_Q4","Ex3_Q5","Ex3_Q6","Ex3_Q7","Ex3_Q8","Ex3_Q9","Ex3_Q10","Ex3_Q11","Ex3_Q12","Ex3_Q13","Ex3_Q14"
+  ]);
+
+  let row = [name];
+
+  // EX 1
+  document.querySelectorAll("#exerciseForm1 select").forEach(select => {
+    row.push(select.value);
+  });
+
+  // EX 2
+  document.querySelectorAll("#exerciseForm2 input").forEach(input => {
+    row.push(input.value.trim());
+  });
+
+  // EX 3
+  for (let i = 1; i <= 14; i++) {
+    let val = document.getElementById("q" + i).value.trim();
+    row.push(val);
+  }
+
+  data.push(row);
+
+  // CONVERT TO CSV
+  let csvContent = data.map(e => e.join(",")).join("\n");
+
+  // DOWNLOAD
+  let blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+  let link = document.createElement("a");
+
+  link.href = URL.createObjectURL(blob);
+  link.download = "reponses_subjonctif.csv";
+  link.click();
+}
+</script>
