@@ -297,46 +297,52 @@
 
 <div class="box">
 
-  <h2>Entrainez-vous avec le subjunctif</h2>
+  <h2>📚 Niveau 3 : Subjonctif avancé</h2>
 
-  <div class="sentence" id="exercise"></div>
+<div class="sentence" id="exercise"></div>
 
-  <input type="text" id="answer" placeholder="Votre réponse">
-  <br>
-  <button onclick="checkAnswer()">Vérifier</button>
-  <button onclick="newExercise()">Nouvel exercice</button>
+<input type="text" id="answer" placeholder="Votre réponse">
+<br>
+<button onclick="checkAnswer()">Vérifier</button>
+<button onclick="newExercise()">Nouvel exercice</button>
 
-  <div class="result" id="result"></div>
-
-</div>
+<div class="result" id="result"></div>
 
 <script>
+  // SUBJECTS + FULL CONJUGATION MAP
   const subjects = [
-    { fr: "Je", subj: "sois" },
-    { fr: "Tu", subj: "sois" },
-    { fr: "Il", subj: "soit" },
-    { fr: "Nous", subj: "soyons" },
-    { fr: "Vous", subj: "soyez" },
-    { fr: "Ils", subj: "soient" }
+    { fr: "je", être: "sois", avoir: "aie", faire: "fasse", aller: "aille", pouvoir: "puisse", vouloir: "veuille", savoir: "sache" },
+    { fr: "tu", être: "sois", avoir: "aies", faire: "fasses", aller: "ailles", pouvoir: "puisses", vouloir: "veuilles", savoir: "saches" },
+    { fr: "il", être: "soit", avoir: "ait", faire: "fasse", aller: "aille", pouvoir: "puisse", vouloir: "veuille", savoir: "sache" },
+    { fr: "nous", être: "soyons", avoir: "ayons", faire: "fassions", aller: "allions", pouvoir: "puissions", vouloir: "voulions", savoir: "sachions" },
+    { fr: "vous", être: "soyez", avoir: "ayez", faire: "fassiez", aller: "alliez", pouvoir: "puissiez", vouloir: "vouliez", savoir: "sachiez" },
+    { fr: "ils", être: "soient", avoir: "aient", faire: "fassent", aller: "aillent", pouvoir: "puissent", vouloir: "veuillent", savoir: "sachent" }
   ];
 
-  const verbs = [
-    "être content",
-    "avoir raison",
-    "aller à la fête",
-    "faire ses devoirs"
+  const verbs = ["être", "avoir", "faire", "aller", "pouvoir", "vouloir", "savoir"];
+
+  const starters = [
+    "Il faut que",
+    "Je veux que",
+    "Bien que",
+    "Pour que",
+    "Avant que",
+    "Il est important que",
+    "Il est possible que",
+    "Bien qu’il soit probable que"
   ];
 
   let currentAnswer = "";
 
   function newExercise() {
     const s = subjects[Math.floor(Math.random() * subjects.length)];
-    const v = verbs[Math.floor(Math.random() * verbs.length)];
+    const verb = verbs[Math.floor(Math.random() * verbs.length)];
+    const starter = starters[Math.floor(Math.random() * starters.length)];
 
-    currentAnswer = s.subj;
+    currentAnswer = s[verb];
 
     document.getElementById("exercise").innerHTML =
-      `${s.fr} veut que tu ______ (${v})`;
+      `${starter} ${s.fr} ______ (${verb})`;
 
     document.getElementById("answer").value = "";
     document.getElementById("result").innerHTML = "";
@@ -351,7 +357,7 @@
       document.getElementById("result").style.color = "green";
     } else {
       document.getElementById("result").innerHTML =
-        `❌ Incorrect. Réponse : ${currentAnswer}`;
+        `❌ Incorrect. Réponse correcte : <strong>${currentAnswer}</strong>`;
       document.getElementById("result").style.color = "red";
     }
   }
