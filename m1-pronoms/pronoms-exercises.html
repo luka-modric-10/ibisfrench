@@ -186,7 +186,7 @@
 
             <div class="form-actions">
                 <button type="button" onclick="checkAnswers2()">Vérifier</button>
-                <a href="pronoms-explication-grammaire.html" style="display: inline-flex; align-items: center; justify-content: center; padding: 8px 16px; background: #274820; color: #fff; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">voir l'explication grammaticale</a>
+                <a href="pronoms-explication-grammaire.html" style="display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px 12px 36px; background: #274820; color: #fff; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 1.2rem;">voir l'explication grammaticale</a>
             </div>
             </form>
 
@@ -255,14 +255,13 @@
     function downloadCSV() {
       const studentName = document.getElementById("studentName").value || "Étudiant";
 
-      // Prepare CSV header
       const data = [
         ["Nom de l'étudiant", studentName],
         [],
         ["Exercice 1: Selectionnez le bon pronom"]
       ];
 
-      // Exercise 1: Selectionnez le bon pronom
+      // exc 1
       const answers1 = {
         1: "la", 2: "les", 3: "les", 4: "y", 5: "leur",
         6: "en", 7: "la"
@@ -279,9 +278,9 @@
         data.push(["Question " + (index + 1), user, correct]);
       });
       data.push(["Score", score1 + " / 7"]);
-      data.push([]); // Empty line before next exercise
+      data.push([]);
 
-      // Exercise 2: Taper dans les blancs
+      // exc 2
       data.push(["Exercice 2: Taper dans les blancs"]);
 
       const answers2 = {
@@ -303,15 +302,13 @@
       data.push(["Score", score2 + " / 15"]);
       data.push([]);
 
-      // Total score
+      // total
       const totalPoints = score1 + score2;
       const totalMax = 7 + 15;
       data.push(["Score total", totalPoints + " / " + totalMax]);
 
-      // Convert to CSV string
       const csvContent = data.map(row => row.map(field => `"${field}"`).join(",")).join("\n");
 
-      // Create blob and download
       const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
       const url = URL.createObjectURL(blob);
 

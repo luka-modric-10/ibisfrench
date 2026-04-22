@@ -37,291 +37,480 @@
         <div>
             <h1>Exercise 1: Qui ou que?</h1>
             <h2>Choisissez <strong>qui</strong> ou <strong>que</strong> pour chaque phrase.</h2>
-            <form id="exercise1">
+            <form id="exerciseForm1">
               <label>1. Le chef 
-                <select>
+                <select data-answer="qui">
                   <option value="">--</option>
                   <option value="qui">qui</option>
                   <option value="que">que</option>
                 </select> prépare les plats est très célèbre.
+                <span class="feedback"></span>
               </label>
               <br><br>
               <label>2. La soupe 
-                <select>
+                <select data-answer="que">
                   <option value="">--</option>
                   <option value="qui">qui</option>
                   <option value="que">que</option>
                 </select> nous avons goûtée était délicieuse.
+                <span class="feedback"></span>
               </label>
               <br><br>
               <label>3. Les étudiants 
-                <select>
+                <select data-answer="qui">
                   <option value="">--</option>
                   <option value="qui">qui</option>
                   <option value="que">que</option>
                 </select> suivent le cours apprennent beaucoup.
+                <span class="feedback"></span>
               </label>
               <br><br>
               <label>4. Le restaurant 
-                <select>
+                <select data-answer="que">
                   <option value="">--</option>
                   <option value="qui">qui</option>
                   <option value="que">que</option>
                 </select> nous avons visité est à Lyon.
+                <span class="feedback"></span>
               </label>
               <br><br>
               <label>5. Les critiques 
-                <select>
+                <select data-answer="qui">
                   <option value="">--</option>
                   <option value="qui">qui</option>
                   <option value="que">que</option>
                 </select> parlent souvent de la Nouvelle Cuisine sont admiratifs.
+                <span class="feedback"></span>
               </label>
               <br><br>
               <label>6. Le plat 
-                <select>
+                <select data-answer="que">
                   <option value="">--</option>
                   <option value="qui">qui</option>
                   <option value="que">que</option>
                 </select> le chef a présenté a surpris tout le monde.
+                <span class="feedback"></span>
               </label>
               <br><br>
               <label>7. Le livre de cuisine 
-                <select>
+                <select data-answer="que">
                   <option value="">--</option>
                   <option value="qui">qui</option>
                   <option value="que">que</option>
-                </select> j’ai acheté contient plusieurs recettes innovantes.
+                </select> j'ai acheté contient plusieurs recettes innovantes.
+                <span class="feedback"></span>
               </label>
               <br><br>
-              <button type="button" onclick="checkAnswers('exercise1')">Vérifier</button>
-              <p id="exercise1-summary"></p>
+              <div class="form-actions">
+                <button type="button" onclick="checkAnswers1()">Vérifier</button>
+              </div>
             </form>
+
+            <h3 id="result1"></h3>
 
         <!-- EXERCISE 2 -->
             <h1>Exercise 2: Definitions et pronoms relatifs</h1>
             <h2>Donnez des définitions avec les pronoms relatifs.</h2>
-            <form id="exercise2">
+            <form id="exerciseForm2">
               <label>1. La <strong>ratatouille</strong> est un plat 
-                <select>
+                <select data-answer="qui">
                   <option value="">--</option>
                   <option value="qui">qui</option>
                   <option value="ce qui">ce qui</option>
                   <option value="que">que</option>
                   <option value="ce que">ce que</option>
                 </select> contient des légumes.
+                <span class="feedback"></span>
               </label>
               <br><br>
               <label>2. La <strong>mousseline</strong> est une sauce 
-                <select>
+                <select data-answer="qui">
                   <option value="">--</option>
                   <option value="qui">qui</option>
                   <option value="ce qui">ce qui</option>
                   <option value="que">que</option>
                   <option value="ce que">ce que</option>
                 </select> accompagne souvent le poisson.
+                <span class="feedback"></span>
               </label>
               <br><br>
               <label>3. Le <strong>fouet</strong> est un ustensile 
-                <select>
+                <select data-answer="qui">
                   <option value="">--</option>
                   <option value="qui">qui</option>
                   <option value="ce qui">ce qui</option>
                   <option value="que">que</option>
                   <option value="ce que">ce que</option>
                 </select>  sert à battre les œufs ou la crème en cuisine.
+                <span class="feedback"></span>
               </label>
               <br><br>
               <label>4. Le <strong>foie gras</strong> est un mets 
-                <select>
+                <select data-answer="que">
                   <option value="">--</option>
                   <option value="qui">qui</option>
                   <option value="ce qui">ce qui</option>
                   <option value="que">que</option>
                   <option value="ce que">ce que</option>
                 </select>  on considère comme un symbole de la gastronomie française.
+                <span class="feedback"></span>
               </label>
               <br><br>
               <label>5. La <strong>tarte Tatin</strong> est un dessert
-                <select>
+                <select data-answer="que">
                   <option value="">--</option>
                   <option value="qui">qui</option>
                   <option value="ce qui">ce qui</option>
                   <option value="que">que</option>
                   <option value="ce que">ce que</option>
-                </select>   j’adore pour son caramel et ses pommes fondantes.
+                </select>   j'adore pour son caramel et ses pommes fondantes.
+                <span class="feedback"></span>
               </label>
               <br><br>
               <label>6. Le <strong>couteau de chef</strong> est un ustensile
-                <select>
+                <select data-answer="qui">
                   <option value="">--</option>
                   <option value="qui">qui</option>
                   <option value="ce qui">ce qui</option>
                   <option value="que">que</option>
                   <option value="ce que">ce que</option>
                 </select>   est essentiel dans toutes les cuisines professionnelles.
+                <span class="feedback"></span>
               </label>
               <br><br>
               <label>7. La <strong>technique du flambage</strong> est une méthode
-                <select>
+                <select data-answer="qui">
                   <option value="">--</option>
                   <option value="qui">qui</option>
                   <option value="ce qui">ce qui</option>
                   <option value="que">que</option>
                   <option value="ce que">ce que</option>
-                </select>   permet de caraméliser un plat avec de l’alcool.
+                </select>   permet de caraméliser un plat avec de l'alcool.
+                <span class="feedback"></span>
               </label>
               <br><br>
               <label>8. Les <strong>épices </strong> sont des ingrédients 
-                <select>
+                <select data-answer="qui">
                   <option value="">--</option>
                   <option value="qui">qui</option>
                   <option value="ce qui">ce qui</option>
                   <option value="que">que</option>
                   <option value="ce que">ce que</option>
                 </select>   donnent beaucoup de saveur aux plats.
+                <span class="feedback"></span>
               </label>
               <br><br>
-              <button type="button" onclick="checkAnswers('exercise2')">Vérifier</button>
-              <p id="exercise2-summary"></p>
+              <div class="form-actions">
+                <button type="button" onclick="checkAnswers2()">Vérifier</button>
+              </div>
             </form>
+
+            <h3 id="result2"></h3>
         <!-- EXERCISE 3 -->
             <h1>Exercice 3 : Cuisine avec des pronoms</h1>
             <h2>Remplissez les espaces vides dans ce paragraphe.</h2>
-            <form id="exercise3">
+            <form id="exerciseForm3">
               <label>Paul Bocuse était un chef français célèbre 
-                <select>
+                <select data-answer="qui">
                   <option value="">--</option>
                   <option value="qui">qui</option>
                   <option value="que">que</option>
                   <option value="où">où</option>
                 </select> a révolutionné la gastronomie.
+                <span class="feedback"></span>
               </label>
               <label>Il dirigeait un restaurant à Lyon 
-                <select>
+                <select data-answer="où">
                   <option value="">--</option>
                   <option value="où">où</option>
                   <option value="que">que</option>
                   <option value="qui">qui</option>
                 </select> de nombreux jeunes chefs venaient apprendre.
+                <span class="feedback"></span>
               </label>
               </label>
               <label>Il a toujours voulu partager
-                <select>
+                <select data-answer="ce qu'">
                   <option value="">--</option>
                   <option value="dont">dont</option>
-                  <option value="ce que">ce que</option>
+                  <option value="ce qu'">ce qu'</option>
                   <option value="ce qui">ce qui</option>
                 </select> il savait avec les jeunes chefs.
+                <span class="feedback"></span>
               </label>
               <br><br>
               <label>Il a créé des plats innovants
-                <select>
+                <select data-answer="qui">
                   <option value="">--</option>
                   <option value="dont">dont</option>
                   <option value="que"> que</option>
                   <option value="qui"> qui</option>
                 </select> sont devenus célèbres dans le monde entier.
+                <span class="feedback"></span>
               </label>
               <label>La soupe VGE est un exemple
-                <select>
+                <select data-answer="dont">
                   <option value="">--</option>
                   <option value="qui">qui</option>
-                  <option value="que"> que</option>
+                  <option value="dont">dont</option>
                   <option value="où">où</option>
                 </select> tout le monde se souvient encore.
               </label>
               <label>C’est un plat très emblématique de la haute cuisine française,
-                <select>
+                <select data-answer="qui">
                   <option value="">--</option>
                   <option value="où">où</option>
                   <option value="que"> que</option>
                   <option value="qui">qui</option>
                 </select> consiste en une soupe de luxe à la truffe noire. 
+                <span class="feedback"></span>
               </label>
               <br><br>
               </label>
               <label>Tous les plats qu’il inventait devenaient célèbres, et
-                <select>
+                <select data-answer="ce qui">
                   <option value="">--</option>
                   <option value="ce que">ce que</option>
                   <option value="que"> que</option>
                   <option value="ce qui">ce qui</option>
-                </select> impressionnait le plus les critiques, c’était leur finesse et leur légèreté.
+                </select> impressionnait le plus les critiques, c'était leur finesse et leur légèreté.
+                <span class="feedback"></span>
               </label>
               <br><br>
               <label>Le chef a écrit plusieurs livres
-                <select>
+                <select data-answer="qui">
                   <option value="">--</option>
                   <option value="qui">qui</option>
                   <option value="où">où</option>
                   <option value="dont">dont</option>
-                </select> parlent de la Nouvelle Cuisine et des techniques qu’il utilisait.
+                </select> parlent de la Nouvelle Cuisine et des techniques qu'il utilisait.
+                <span class="feedback"></span>
               </label>
-              <label>Beaucoup de chefs admirent Paul Bocuse, c’est un maître
-                <select>
+              <label>Beaucoup de chefs admirent Paul Bocuse, c'est un maître
+                <select data-answer="dont">
                   <option value="">--</option>
                   <option value="ce qui">ce qui</option>
                   <option value="dont">dont</option>
                   <option value="que">que</option>
-                </select> l’on peut apprendre beaucoup.
+                </select> l'on peut apprendre beaucoup.
+                <span class="feedback"></span>
               </label>
               <br><br>
               <label>Le restaurant du chef est un lieu
-                <select>
+                <select data-answer="où">
                   <option value="">--</option>
                   <option value="que">que</option>
                   <option value="où">où</option>
                   <option value="qui">qui</option>
                 </select> les gourmets viennent déguster ses plats.
+                <span class="feedback"></span>
               </label>
               <label>Il a aussi inventé des recettes
-                <select>
+                <select data-answer="dont">
                   <option value="">--</option>
                   <option value="dont">dont</option>
                   <option value="ce dont">ce dont</option>
                   <option value="ce qui">ce qui</option>
-                </select>  il était fier et qu’il partageait avec passion.
+                </select>  il était fier et qu'il partageait avec passion.
+                <span class="feedback"></span>
               </label>
               <br><br>
               <label>Enfin, Paul Bocuse est un chef
-                <select>
+                <select data-answer="dont">
                   <option value="">--</option>
                   <option value="dont">dont</option>
                   <option value="ce dont">ce dont</option>
                   <option value="qui">qui</option>
-                </select>  l’influence sur la cuisine française reste immense, même après sa disparition.
+                </select>  l'influence sur la cuisine française reste immense, même après sa disparition.
+                <span class="feedback"></span>
               </label>
               <br><br>
-              <button type="button" onclick="checkAnswers('exercise3')">Vérifier</button>
-              <p id="exercise3-summary"></p>
-              <a href="pronoms-relatifs-explication-grammaire.html" style="display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; background: #274820; color: #fff; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 1.2rem;">voir l'explication grammaticale</a>
+              <div class="form-actions">
+                <button type="button" onclick="checkAnswers3()">Vérifier</button>
+                <a href="pronoms-relatifs-explication-grammaire.html" style="display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px 12px 36px; background: #274820; color: #fff; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 1.2rem;">voir l'explication grammaticale</a>
+              </div>
             </form>
-          
+
+            <h3 id="result3"></h3>
+
             <script>
-            function checkAnswers(formId) {
-              const form = document.getElementById(formId);
-              const selects = form.querySelectorAll("select");
-              let filledCount = 0;
-              let emptyCount = 0;
-          
+            function checkAnswers1() {
+              const selects = document.querySelectorAll('#exerciseForm1 select');
+              let score = 0;
+
               selects.forEach(select => {
+                const correctAnswer = select.dataset.answer;
+                const feedback = select.parentElement.querySelector('.feedback');
+
                 if (select.value === "") {
-                  select.classList.remove("filled");
-                  select.classList.add("empty");
-                  emptyCount++;
-                } else {
-                  select.classList.remove("empty");
-                  select.classList.add("filled");
-                  filledCount++;
+                  feedback.textContent = " ⚠ Choisissez une réponse";
+                  feedback.className = "feedback incorrect";
+                } 
+                else if (select.value === correctAnswer) {
+                  feedback.textContent = " ✔ Correct";
+                  feedback.className = "feedback correct";
+                  score++;
+                } 
+                else {
+                  feedback.textContent = " ✖ Incorrect";
+                  feedback.className = "feedback incorrect";
                 }
               });
-          
-              const summary = document.getElementById(`${formId}-summary`);
-              summary.textContent = `Champs remplis : ${filledCount}, champs vides : ${emptyCount}`;
+              document.getElementById("result1").innerHTML = "Score: " + score + " / 7";
+            }
+
+            function checkAnswers2() {
+              const selects = document.querySelectorAll('#exerciseForm2 select');
+              let score = 0;
+
+              selects.forEach(select => {
+                const correctAnswer = select.dataset.answer;
+                const feedback = select.parentElement.querySelector('.feedback');
+
+                if (select.value === "") {
+                  feedback.textContent = " ⚠ Choisissez une réponse";
+                  feedback.className = "feedback incorrect";
+                } 
+                else if (select.value === correctAnswer) {
+                  feedback.textContent = " ✔ Correct";
+                  feedback.className = "feedback correct";
+                  score++;
+                } 
+                else {
+                  feedback.textContent = " ✖ Incorrect";
+                  feedback.className = "feedback incorrect";
+                }
+              });
+              document.getElementById("result2").innerHTML = "Score: " + score + " / 8";
+            }
+
+            function checkAnswers3() {
+              const selects = document.querySelectorAll('#exerciseForm3 select');
+              let score = 0;
+
+              selects.forEach(select => {
+                const correctAnswer = select.dataset.answer;
+                const feedback = select.parentElement.querySelector('.feedback');
+
+                if (select.value === "") {
+                  feedback.textContent = " ⚠ Choisissez une réponse";
+                  feedback.className = "feedback incorrect";
+                } 
+                else if (select.value === correctAnswer) {
+                  feedback.textContent = " ✔ Correct";
+                  feedback.className = "feedback correct";
+                  score++;
+                } 
+                else {
+                  feedback.textContent = " ✖ Incorrect";
+                  feedback.className = "feedback incorrect";
+                }
+              });
+              document.getElementById("result3").innerHTML = "Score: " + score + " / 13";
             }
             </script>
         </div>
+
+        <!-- --------------------CSV DOWNLOAD SECTION-------------------- -->
+        <div style="margin-top: 60px; padding: 20px; border-top: 2px solid #ddd;">
+            <h2 style="font-size: 1.5rem;">Télécharger votre rapport</h2>
+            <label for="studentName" style="display: block; margin-bottom: 10px; font-size: 1.3rem;">Votre nom:</label>
+            <input id="studentName" placeholder="Entrez votre nom" style="margin-bottom:15px; padding:8px; font-size: 1.1rem; width: 250px;">
+            <br>
+            <button type="button" onclick="downloadCSV()" style="padding: 12px 24px; font-size: 1.2rem; cursor: pointer; background: #2e7d32; color: #fff; border: none; border-radius: 4px;">Télécharger</button>
+        </div>
     </main>
+<!-- ----------CSV DOWNLOAD SCRIPT---------- -->
+    <script>
+    function downloadCSV() {
+      const studentName = document.getElementById("studentName").value || "Étudiant";
+
+      const data = [
+        ["Nom de l'étudiant", studentName],
+        [],
+        ["Exercice 1: Qui ou que?"]
+      ];
+
+      // exc 1
+      const answers1 = {
+        1: "qui", 2: "que", 3: "qui", 4: "que", 5: "qui",
+        6: "que", 7: "que"
+      };
+
+      let score1 = 0;
+      data.push(["Question", "Réponse de l'étudiant", "Réponse correcte"]);
+
+      const selects1 = document.querySelectorAll('#exerciseForm1 select');
+      selects1.forEach((select, index) => {
+        let user = select.value || "";
+        let correct = answers1[index + 1];
+        if(user === correct) score1++;
+        data.push(["Question " + (index + 1), user, correct]);
+      });
+      data.push(["Score", score1 + " / 7"]);
+      data.push([]);
+
+      // exc 2 ------------
+      data.push(["Exercice 2: Definitions et pronoms relatifs"]);
+
+      const answers2 = {
+        1: "qui", 2: "qui", 3: "qui", 4: "que",
+        5: "que", 6: "qui", 7: "qui", 8: "qui"
+      };
+
+      let score2 = 0;
+      data.push(["Question", "Réponse de l'étudiant", "Réponse correcte"]);
+
+      const selects2 = document.querySelectorAll('#exerciseForm2 select');
+      selects2.forEach((select, index) => {
+        let user = select.value || "";
+        let correct = answers2[index + 1];
+        if(user === correct) score2++;
+        data.push(["Question " + (index + 1), user, correct]);
+      });
+      data.push(["Score", score2 + " / 8"]);
+      data.push([]);
+
+      // exc 3 --------------
+      data.push(["Exercice 3: Cuisine avec des pronoms"]);
+
+      const answers3 = {
+        1: "qui", 2: "où", 3: "ce qu'", 4: "qui",
+        5: "dont", 6: "qui", 7: "ce qui", 8: "qui",
+        9: "dont", 10: "où", 11: "dont", 12: "dont", 13: "dont"
+      };
+
+      let score3 = 0;
+      data.push(["Question", "Réponse de l'étudiant", "Réponse correcte"]);
+
+      const selects3 = document.querySelectorAll('#exerciseForm3 select');
+      selects3.forEach((select, index) => {
+        let user = select.value || "";
+        let correct = answers3[index + 1];
+        if(user === correct) score3++;
+        data.push(["Question " + (index + 1), user, correct]);
+      });
+      data.push(["Score", score3 + " / 13"]);
+      data.push([]);
+
+      // total 
+      const totalPoints = score1 + score2 + score3;
+      const totalMax = 7 + 8 + 13;
+      data.push(["Score total", totalPoints + " / " + totalMax]);
+
+      const csvContent = data.map(row => row.map(field => `"${field}"`).join(",")).join("\n");
+
+      const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "pronoms_relatifs_exercises_" + studentName + ".csv";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+    </script>
 </body>
 </html>

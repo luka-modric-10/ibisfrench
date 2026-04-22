@@ -335,7 +335,7 @@
 
             <div class="form-actions">
                 <button type="button" onclick="checkAnswers3()">Vérifier</button>
-                <a href="subjonctif-explication-grammaire.html" style="display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; background: #274820; color: #fff; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 1.2rem;">voir l'explication grammaticale</a>
+                <a href="subjonctif-explication-grammaire.html" style="display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px 12px 36px; background: #274820; color: #fff; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 1.2rem;">voir l'explication grammaticale</a>
             </div>
 
             </form>
@@ -395,14 +395,13 @@
     function downloadCSV() {
       const studentName = document.getElementById("studentName").value || "Étudiant";
 
-      // Prepare CSV header
       const data = [
         ["Nom de l'étudiant", studentName],
         [],
         ["Exercice 1: Subjonctif ou Indicatif"]
       ];
 
-      // Exercise 1: Subjonctif ou Indicatif
+      // exc 1
       const answers1 = {
         1: "S", 2: "I", 3: "S", 4: "I", 5: "S",
         6: "I", 7: "S", 8: "S", 9: "I", 10: "S"
@@ -419,9 +418,9 @@
         data.push(["Question " + (index + 1), user, correct]);
       });
       data.push(["Score", score1 + " / 10"]);
-      data.push([]); // Empty line before next exercise
+      data.push([]);
 
-      // Exercise 2: Complétez avec le verbe
+      // exc 2
       data.push(["Exercice 2: Complétez avec le verbe"]);
 
       const answers2 = {
@@ -441,9 +440,9 @@
         data.push(["Question " + (index + 1), user, correct]);
       });
       data.push(["Score", score2 + " / 10"]);
-      data.push([]); // Empty line before next exercise
+      data.push([]); 
 
-      // Exercise 3: Remplissez les blancs
+      // exc 3
       data.push(["Exercice 3: Remplissez les blancs"]);
 
       const answers3 = {
@@ -465,15 +464,13 @@
       data.push(["Score", score3 + " / 14"]);
       data.push([]);
 
-      // Total score
+      // total
       const totalPoints = score1 + score2 + score3;
       const totalMax = 10 + 10 + 14;
       data.push(["Score total", totalPoints + " / " + totalMax]);
 
-      // Convert to CSV string
       const csvContent = data.map(row => row.map(field => `"${field}"`).join(",")).join("\n");
 
-      // Create blob and download
       const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
       const url = URL.createObjectURL(blob);
 
