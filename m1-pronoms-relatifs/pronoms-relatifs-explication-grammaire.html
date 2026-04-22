@@ -5,10 +5,12 @@
   <title>Explication de Grammaire - Pronoms Relatifs</title>
   <style>
   body {
-    font-family: 'Dongle', 'Sansation';
+    font-family: 'Dongle', 'Sansation', sans-serif;
     padding: 20px;
     background: #fff;
     color: #111;
+    font-size: 26px; /* Increased base font size */
+    line-height: 1.3;
   }
 
   /* MAIN CONTAINER */
@@ -19,13 +21,13 @@
 
   /* HEADINGS */
   h1 {
-    font-size: 34px;
+    font-size: 48px; /* Increased */
     margin-bottom: 20px;
   }
 
   h2 {
     margin-top: 0;
-    font-size: 24px;
+    font-size: 34px; /* Increased */
   }
 
   /* CARDS */
@@ -44,7 +46,7 @@
     padding: 12px 15px;
     margin: 15px 0;
     border-radius: 6px;
-    font-size: 16px;
+    font-size: 24px; /* Increased */
   }
 
   /* EXAMPLES */
@@ -53,7 +55,9 @@
     padding: 10px 12px;
     border-radius: 6px;
     margin-top: 6px;
+    margin-bottom: 12px;
     font-style: italic;
+    font-size: 24px; /* Increased */
   }
 
   /* LISTS */
@@ -63,7 +67,7 @@
   }
 
   li {
-    margin-bottom: 6px;
+    margin-bottom: 10px;
   }
 
   /* VERB SECTION */
@@ -84,9 +88,10 @@
   .verb-box h3 {
     margin-top: 0;
     margin-bottom: 10px;
+    font-size: 28px; /* Increased */
   }
 
-  /* HEADER NAV IMPROVEMENT (subtle only) */
+  /* HEADER NAV IMPROVEMENT */
   .site-header {
     display: flex;
     justify-content: space-between;
@@ -96,10 +101,20 @@
     border-bottom: 1px solid #eee;
   }
 
+  .logo a {
+    text-decoration: none;
+    font-size: 32px; /* Increased */
+    color: #111;
+  }
+  
+  .logo-ibis { font-weight: bold; }
+  .logo-french { color: #2e7d32; }
+
   .header-nav a {
-    margin-left: 12px;
+    margin-left: 15px;
     text-decoration: none;
     color: #333;
+    font-size: 24px; /* Increased */
   }
 
   .header-nav a:hover {
@@ -122,7 +137,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Almendra+Display&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Dongle:wght@300;400;700&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-  <link href="../css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -141,25 +155,61 @@
             <h1>📚 Les Pronoms Relatifs</h1>
         
             <div class="card">
-            <h2>Quels sont les pronoms relatifs ?</h2>
-            <p>Les <strong>pronoms relatifs</strong> sont des mots qui <strong>remplacent un nom ou un groupe nominal</strong>  et <strong>relient deux phrases.</strong> Ils permettent d’éviter les répétitions et de donner des informations supplémentaires sur un nom.</p>
+            <h2>1. Les pronoms relatifs simples</h2>
+            <p>Les <strong>pronoms relatifs</strong> sont des mots qui <strong>remplacent un nom ou un groupe nominal</strong> (appelé l'antécédent) et <strong>relient deux phrases.</strong> Ils permettent d’éviter les répétitions.</p>
             <ul>
-                <li><strong>Qui → sujet</strong> : regarde qui fait l’action. <strong>Exemple</strong> : <i>Le chef <strong>qui</strong> prépare les plats est célèbre.</i></li>
-                <li><strong>Que → Complément Objet Direct (COD)</strong> : regarde ce qui subit l’action. <strong>Exemple</strong> : <i>Le plat <strong>que</strong> j’ai goûté était délicieux.</i></li>
-                <li><strong>Dont → complément de “de”</strong> : remplace un “de + nom”. <strong>Exemple</strong> : <i>Le livre <strong>dont</strong> je parle est nouveau.</i></li>
-                <li><strong>Où → lieu ou temps</strong> : indique un endroit ou un moment. <strong>Exemple</strong> : <i>Le restaurant <strong>où</strong> nous dînons est célèbre.</i></li>
+                <li><strong>Qui → Sujet</strong> : Il remplace la personne ou la chose qui fait l'action. Il est toujours suivi d'un verbe.
+                  <div class="example">Exemple : Le chef <strong>qui</strong> prépare les plats est célèbre.</div>
+                </li>
+                <li><strong>Que (Qu') → Complément Objet Direct (COD)</strong> : Il remplace ce qui subit l’action. Il est toujours suivi d'un nouveau sujet. Attention : "que" devient "qu'" devant une voyelle !
+                  <div class="example">Exemple : Le plat <strong>que</strong> j’ai goûté était délicieux. / L'histoire <strong>qu'</strong>il raconte.</div>
+                </li>
+                <li><strong>Dont → Complément avec "de"</strong> : Il remplace un élément introduit par la préposition "de" (parler de, avoir besoin de, avoir envie de, etc.).
+                  <div class="example">Exemple : Le livre <strong>dont</strong> je parle est nouveau. (Je parle <em>de</em> ce livre).</div>
+                </li>
+                <li><strong>Où → Lieu ou Temps</strong> : Il indique un endroit physique ou un moment précis dans le temps.
+                  <div class="example">Exemple : Le restaurant <strong>où</strong> nous dînons. / Le jour <strong>où</strong> je suis né.</div>
+                </li>
             </ul>
             </div>
         
             <div class="tip">
-            💡 <strong>Qui</strong> est toujours suivi par un <strong>VERBE</strong>.
+            💡 <strong>Règle d'or :</strong>
               <br>
-            💡 <strong>Que</strong> est toujours suivi par un <strong>SUJET + verbe</strong>.
+            • <strong>Qui</strong> est toujours suivi par un <strong>VERBE</strong>.
               <br>
-            💡 <strong>Ce qui / ce que / ce dont</strong> → idées générales
-              <br>
-            <strong>Exemple</strong> : Le repas <u>que</u> tu manges → <u>Ce que</u> tu manges
+            • <strong>Que / Qu'</strong> est toujours suivi par un <strong>SUJET + verbe</strong>.
             </div>
+
+            <div class="card">
+            <h2>2. Les pronoms neutres (Idées générales)</h2>
+            <p>On utilise <strong>ce qui, ce que ou ce dont</strong> quand il n'y a pas de nom précis avant. Ils remplacent une idée générale, une phrase entière, ou l'expression "la chose qui / la chose que".</p>
+            <ul>
+                <li><strong>Ce qui (Sujet)</strong> : 
+                  <div class="example">Exemple : Je ne comprends pas <strong>ce qui</strong> se passe ici.</div>
+                </li>
+                <li><strong>Ce que / Ce qu' (COD)</strong> : 
+                  <div class="example">Exemple : Dis-moi <strong>ce que</strong> tu veux manger ce soir.</div>
+                </li>
+                <li><strong>Ce dont (Complément avec "de")</strong> : 
+                  <div class="example">Exemple : C'est exactement <strong>ce dont</strong> j'ai besoin ! (J'ai besoin <em>de</em> ça).</div>
+                </li>
+            </ul>
+            </div>
+
+            <div class="card">
+            <h2>3. Les pronoms relatifs composés</h2>
+            <p>On utilise <strong>lequel, laquelle, lesquels, lesquelles</strong> après une <strong>préposition</strong> (sur, sous, pour, avec, sans, derrière...). Ils s'accordent en genre (masculin/féminin) et en nombre (singulier/pluriel) avec le nom qu'ils remplacent.</p>
+            <ul>
+                <li><strong>Lequel</strong> (Masculin Singulier)</li>
+                <li><strong>Laquelle</strong> (Féminin Singulier)</li>
+                <li><strong>Lesquels</strong> (Masculin Pluriel)</li>
+                <li><strong>Lesquelles</strong> (Féminin Pluriel)</li>
+            </ul>
+            <div class="example">Exemple : La table <strong>sur laquelle</strong> j'ai posé mon sac.</div>
+            <div class="example">Exemple : Les collègues <strong>avec lesquels</strong> je travaille sont très sympathiques.</div>
+            </div>
+
         </div> 
     </main>
 </body>
