@@ -248,17 +248,12 @@
             <h2>Récrivez la phrase en utilisant les pronoms appropriés dans le correct ordre.</h2>
 
             <form id ="exercise3Form">
-                <p>1. <em>Le chef sert la soupe aux invités.</em> <br> Le chef <input type="text" id="q1a"> <input type="text" id="q1b"> sert.</p>
-
-                <p>2. <em>Les apprentis préparent des sauces pour leurs clients.</em> <br> Les apprentis <input type="text" id="q2a"> <input type="text" id="q2b"> préparent.</p>
-                
-                <p>3. <em>Les chefs présentent plusieurs plats dans le restaurant.</em> <br> Les chefs <input type="text" id="q3a"> <input type="text" id="q3b"> présentent.</p>
-                
-                <p>4. <em>Le critique explique le concept de la Nouvelle Cuisine aux jeunes chefs.</em> <br> Le critique <input type="text" id="q4a"> <input type="text" id="q4b"> explique.</p>
-
-                <p>5. <em>Le chef parle de sa recette aux apprentis.</em> <br> Le chef <input type="text" id="q5a"> <input type="text" id="q5b"> parle.</p>
-
-                <p>6. <em>Le serveur amène le plat dans la salle.</em> <br> Le serveur <input type="text" id="q6a"><small>[apostrophe]</small><input type="text" id="q6b"> amène.</p>
+                <p>1. Le chef sert la soupe aux invités. → Le chef <input type="text" id="q1a"> <input type="text" id="q1b"> sert.</p>
+                <p>2. Les apprentis préparent des sauces pour leurs clients → Les apprentis <input type="text" id="q2a"> <input type="text" id="q2b"> préparent.</p>
+                <p>3. Les chefs présentent plusieurs plats dans le restaurant → Les chefs <input type="text" id="q3a"> <input type="text" id="q3b"> présentent.</p>
+                <p>4. Le critique explique le concept de la Nouvelle Cuisine aux jeunes chefs → Le critique <input type="text" id="q4a"> <input type="text" id="q4b"> explique.</p>
+                <p>5. Le chef parle de sa recette aux apprentis → Le chef <input type="text" id="q5a"> <input type="text" id="q5b"> parle.</p>
+                <p>6. Le serveur amène le plat dans la salle → Le serveur <input type="text" id="q6a"> <input type="text" id="q6b"> amène.</p>
             
                 <div class="form-actions">
                     <button type="button" onclick="checkAnswers3()">Vérifier</button>
@@ -271,12 +266,12 @@
             <script>
                 function checkAnswers3() {
                     const answers = {
-                        q1a: "la", q1b: "leur",
+                        q1a: "la", q1b: "les",
                         q2a: "les", q2b: "leur",
-                        q3a: "les", q3b: "y",
-                        q4a: "le", q4b: "leur",
-                        q5a: "en", q5b: "leur",
-                        q6a: "l", q6b: "y"
+                        q3a: "les", q3b: "les",
+                        q4a: "le", q4b: "lui",
+                        q5a: "le", q5b: "leur",
+                        q6a: "le", q6b: "lui"
                     };
 
                     let score = 0;
@@ -365,12 +360,12 @@
       data.push(["Exercice 3: Doubles pronoms"]);
 
       const answers3 = {
-        q1a: "la", q1b: "leur",
+        q1a: "la", q1b: "les",
         q2a: "les", q2b: "leur",
-        q3a: "les", q3b: "y",
-        q4a: "le", q4b: "leur",
-        q5a: "en", q5b: "leur",
-        q6a: "l", q6b: "y"
+        q3a: "les", q3b: "les",
+        q4a: "le", q4b: "lui",
+        q5a: "le", q5b: "leur",
+        q6a: "le", q6b: "lui"
       };
 
       let score3 = 0;
