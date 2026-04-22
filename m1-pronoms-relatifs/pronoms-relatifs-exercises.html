@@ -4,13 +4,16 @@
   <meta charset="UTF-8">
   <title>Exercices - Pronoms Relatifs</title>
   <style>
-    body { font-family: Arial; padding: 20px; }
-    p { margin-bottom: 18px; line-height: 1.6; font-size: large;}
-    input { width: 120px; margin: 0 5px; }
+    body { font-family: 'Dongle', 'Sansation'; padding: 20px; }
+    p { margin-bottom: 18px; line-height: 1.6; font-size: 1.5rem;}
+    input { width: 120px; margin: 0 5px; font-size: 1.1rem; }
+    select { font-size: 1.1rem; }
+    label { font-size: 1.3rem; }
     .correct { color: #008000; }
     .incorrect { color: #ff0000; }
-    button { margin-top: 0; padding: 10px 20px; font-size: 16px; cursor: pointer; background: #2e7d32; color: #fff; border: none; border-radius: 4px; }
-    .form-actions { display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-top: 20px; }
+    button { margin-top: 0; padding: 12px 24px; font-size: 1.2rem; cursor: pointer; background: #2e7d32; color: #fff; border: none; border-radius: 4px; }
+    form { width: 100%; }
+    .form-actions { display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-top: 20px; width: 100%; }
     .nav-buttons { display: flex; gap: 10px; }
     .nav-button { display: inline-flex; align-items: center; justify-content: center; padding: 10px 18px; background: #e8f5e9; color: #2e7d32; border-radius: 4px; text-decoration: none; font-weight: 600; margin-left: 950px;}
     .nav-button:hover { background: #c8e6c9; }
@@ -228,7 +231,6 @@
                 </select> de nombreux jeunes chefs venaient apprendre.
                 <span class="feedback"></span>
               </label>
-              </label>
               <label>Il a toujours voulu partager
                 <select data-answer="ce qu'">
                   <option value="">--</option>
@@ -255,8 +257,9 @@
                   <option value="dont">dont</option>
                   <option value="où">où</option>
                 </select> tout le monde se souvient encore.
+                <span class="feedback"></span>
               </label>
-              <label>C’est un plat très emblématique de la haute cuisine française,
+              <label>C'est un plat très emblématique de la haute cuisine française,
                 <select data-answer="qui">
                   <option value="">--</option>
                   <option value="où">où</option>
@@ -266,8 +269,7 @@
                 <span class="feedback"></span>
               </label>
               <br><br>
-              </label>
-              <label>Tous les plats qu’il inventait devenaient célèbres, et
+              <label>Tous les plats qu'il inventait devenaient célèbres, et
                 <select data-answer="ce qui">
                   <option value="">--</option>
                   <option value="ce que">ce que</option>
@@ -427,7 +429,9 @@
 
       const data = [
         ["Nom de l'étudiant", studentName],
+        ["Date", new Date().toLocaleString()],
         [],
+        [Date.now()],
         ["Exercice 1: Qui ou que?"]
       ];
 
